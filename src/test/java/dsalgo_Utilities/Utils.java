@@ -1,18 +1,30 @@
 package dsalgo_Utilities;
 
 import java.io.IOException;
+import java.time.Duration;
 import java.util.List;
 import java.util.Map;
 
-import dsalgo_Utilities.ExcelReading;
-import dsalgo_Utilities.ConfigReader;
-
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import dsalgo_DriverFactory.DriverFactory;
 
 public class Utils {
+	WebDriver driver = DriverFactory.getDriver();
 	private ExcelReading reader = new ExcelReading();
 	private ConfigReader configObj = new ConfigReader();
 	String excelPath = configObj.getProperty("pythonCodeExcelPath");
+	
+	
+	public void waitForElement(WebElement element) {
+		new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.visibilityOf(element));
+
+	}
 	public String getCodefromExcel(String sheetname, int rownumber) throws InvalidFormatException, IOException {
 		List<Map<String, String>> testdata = reader.getData(excelPath, sheetname);
 		String code = testdata.get(rownumber).get("pythonCode");
@@ -23,5 +35,9 @@ public class Utils {
 		List<Map<String, String>> testdata = reader.getData(excelPath, sheetname);
 		String result = testdata.get(rownumber).get("output");
 		return result;
+	}
+	public void enterCode(String code, WebElement element) {
+
+		new Actions(driver).sendKeys(element, code).perform();
 	}
 }
