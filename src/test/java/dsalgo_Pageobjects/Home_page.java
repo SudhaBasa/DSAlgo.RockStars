@@ -47,7 +47,12 @@ public class Home_page {
 	@FindBy (linkText = "Register") WebElement Register;
 	@FindBy (xpath = "//input[@value='Register']") WebElement RegisterBtn;
 	@FindBy (linkText = "Sign in") WebElement Signin; 
+	@FindBy(id = "id_username") WebElement loginUserName;
+	@FindBy(id = "id_password") WebElement loginPwd;
+
 	@FindBy (xpath = "//input[@value='Login']") WebElement LoginBtn;
+	@FindBy(xpath = "//div[contains(text(),'New Account Created.')]")
+	WebElement newAccountMsg;
 	//@constructor
 	public Home_page(WebDriver browserDriver) {
 		driver = browserDriver;
@@ -55,6 +60,26 @@ public class Home_page {
 		
 	}
 	//@page actions
+	public void enterUsername(String username) {
+		loginUserName.sendKeys(username);
+	}
+
+	public void enterLoginPwd(String pwd) {
+		loginPwd.sendKeys(pwd);
+	}
+
+	public String accountCreationMsg() {
+		return newAccountMsg.getText();
+		// System.out.println(newAccountMsg.getText());
+	}
+	public void clickOnLoginBtn() {
+		LoginBtn.click();
+	}
+
+	public String getPageTitle() {
+		String title = driver.getTitle();
+		return title;
+	}
 	
 	public void click_getstarted() {
 		getstarted.click(); 

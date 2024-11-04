@@ -1,6 +1,9 @@
 package dsalgo_StepDefinition;
 
+import static org.testng.Assert.assertEquals;
+
 import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 import dsalgo_DriverFactory.DriverFactory;
@@ -16,6 +19,55 @@ public class Homepage_step {
 	private ConfigReader reader = new ConfigReader();
 	private WebDriver driver = DriverFactory.getDriver();
 	private Home_page homepage = new Home_page(driver);
+	
+	// @TS_Register_01
+		@Given("The user opens DSAlgo portal link")
+		public void the_user_opens_ds_algo_portal_link() {
+			// driver.get(ConfigReader.intializeProperties().getProperty("appURL"));
+			//ConfigReader.getProperty("appURL");
+			driver.get(ConfigReader.getProperty("appURL"));
+		}
+
+//		@When("The user clicks the {string} Button")
+//		public void the_user_clicks_the_button(String string) {
+//
+//			driver.findElement(By.xpath("//button[contains(text(),'Get Started')]")).click();
+//		}
+
+		@Then("The User should be navigated to Home Page")
+		public void the_user_should_be_navigated_to_home_page() {
+
+			String title = driver.getTitle();
+			// System.out.println(title);
+			Assert.assertEquals(title, "NumpyNinja", "Title do not match");
+
+		}
+
+		// login on homepage
+		@Given("The user is on Sign In Page of DS Algo Portal")
+		public void the_user_is_on_login_page_of_ds_algo_portal() {
+			Loggerload.info("The user is on Signin page of DS Algo portal");
+			//ConfigReader.getProperty("appHomeURL");
+			driver.get(ConfigReader.getProperty("appHomeURL"));
+			homepage.click_signin();
+		}
+
+		@When("The user enter valid {string} and {string}")
+		public void the_user_enter_valid_and(String username, String password) {
+			Loggerload.info("Signing on the home page");
+			homepage.enterUsername(username);
+			homepage.enterLoginPwd(password);
+			homepage.clickOnLoginBtn();
+		}
+
+		@When("The user is navigated to homepage")
+		public void The_user_is_navigated_to_homepage() {
+			Loggerload.info("The user is on Home Page");
+			assertEquals("NumpyNinja", homepage.getPageTitle());
+
+		}
+
+	
 	
 //@Homepage_01
 	@Given("The user should open the browser")
