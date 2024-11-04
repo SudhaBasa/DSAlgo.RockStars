@@ -18,7 +18,7 @@ public class Utils {
 	WebDriver driver = DriverFactory.getDriver();
 	private ExcelReading reader = new ExcelReading();
 	private ConfigReader configObj = new ConfigReader();
-	String excelPath = configObj.getProperty("pythonCodeExcelPath");
+	String excelPath = configObj.getProperty("excelFilePath");
 	
 	
 	public void waitForElement(WebElement element) {
