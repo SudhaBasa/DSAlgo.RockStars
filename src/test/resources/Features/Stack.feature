@@ -4,7 +4,7 @@ Feature: User launch dsalgo application and test Data Structure introduction pag
   @stack_01
   Scenario: The user is logged in to DS Algo portal
     Given The user is on Signin page of DS Algo portal
-    When The user enter valid "Rockstars_Numpy" and "Numpy@Rock123"
+    When The user enter valid username and password "Rockstars_Numpy" and "Numpy@Rock123"
     And The user click on login button
     Then The user redirected to homepage in DS
   @stack_02
