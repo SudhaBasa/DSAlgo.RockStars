@@ -1,8 +1,12 @@
 package dsalgo_Hooks;
 
+import java.io.File;
+import java.io.IOException;
 import java.time.Duration;
 
 import java.util.Properties;
+
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -31,27 +35,20 @@ public class Hooks {
 		
 	}
 	
-	@Before
-	public void scenario(Scenario scenario) {
-		Loggerload.info("===============================================================================================");
-		Loggerload.info(scenario.getSourceTagNames() +" : "+scenario.getName());
-		Loggerload.info("-----------------------------------------------------------------------------------------------");
-		
-	}
-	
-
 
 	@After
 	public void tearDown(Scenario scenario) throws InterruptedException {
 		Loggerload.error("Scenario is Failed and taking Screenshot");
 		String scenarioName=scenario.getName().replaceAll(" ", "_");
 		
-		if(scenario.isFailed()) {
-			byte[] screenShot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
-			scenario.attach(screenShot, "image/png", scenarioName);
-		}
-		
-		
+		if (scenario.isFailed()) {
+	        File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+	        try {
+	            FileUtils.copyFile(screenshot, new File("target/screenshots/" + scenario.getName() + ".png"));
+	        } catch (IOException e) {
+	            e.printStackTrace();
+	        }
+	    }
 		
 		
 		Thread.sleep(3000);
