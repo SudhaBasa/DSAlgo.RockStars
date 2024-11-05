@@ -80,8 +80,8 @@ public class Homepage_step {
 	@When("The user enter the DS_Algo Portal link")
 	public void the_user_enter_the_ds_algo_portal_link() {
 		
-		Loggerload.info("portal URL: " + reader.getProperty("App_URL"));
-		DriverFactory.getDriver().get(reader.getProperty("App_URL"));
+		Loggerload.info("portal URL: " + reader.getProperty("appURL"));
+		DriverFactory.getDriver().get(reader.getProperty("appURL"));
 	   
 	}
 
@@ -96,7 +96,7 @@ public class Homepage_step {
 	@Given("The user is able to open the DS Algo Portal URL in any supported browser")
 	public void the_user_is_able_to_open_the_ds_algo_portal_url_in_any_supported_browser() {
 		
-		DriverFactory.getDriver().get(reader.getProperty("App_URL"));
+		DriverFactory.getDriver().get(reader.getProperty("appURL"));
 
 	}
 
@@ -120,7 +120,7 @@ public class Homepage_step {
 	@Given("The user is on the Data Structure introduction page")
 	public void the_user_is_on_the_data_structure_introduction_page() {
 		
-		DriverFactory.getDriver().get(reader.getProperty("Home_URL"));
+		DriverFactory.getDriver().get(reader.getProperty("appHomeURL"));
 	
 	}
 
@@ -142,7 +142,7 @@ public class Homepage_step {
 	@Given("The user is on the home page with {string} and {string} page")
 	public void the_user_is_on_the_home_page_with_and_page(String string, String string2) {
 		
-		DriverFactory.getDriver().get(reader.getProperty("Home_URL"));
+		DriverFactory.getDriver().get(reader.getProperty("appHomeURL"));
 	   
 	}
 	@When("^The user selects any data structures item from the drop down without Sign in (.+)$")
@@ -162,7 +162,7 @@ public class Homepage_step {
 	@Given("The user is on the DS Introduction page")
 	public void the_user_is_on_the_ds_introduction_page() {
 		
-		DriverFactory.getDriver().get(reader.getProperty("Home_URL")); 
+		DriverFactory.getDriver().get(reader.getProperty("appHomeURL")); 
 	   
 	}
 
