@@ -16,7 +16,7 @@ import org.openqa.selenium.Alert;
 
 public class Stack_POM {
 	
-	public static WebDriver driver = DriverFactory.getDriver();
+	WebDriver driver = DriverFactory.getDriver();
 	Utils eleUtil = new Utils();
 		
 	JavascriptExecutor jse = (JavascriptExecutor) driver;
@@ -33,9 +33,9 @@ public class Stack_POM {
 	WebElement output;
 	@FindBy(xpath = "//*[@id=\"answer_form\"]/button")
 	WebElement runbutton;
-	@FindBy(xpath = "//*[@id=\"content\"]/li[2]/a")
+	@FindBy(xpath = "/html/body/div[2]/ul[2]/a")
 	WebElement implemenation_stack;	
-	@FindBy(xpath = "//*[@id=\"content\"]/li[3]/a")
+	@FindBy(xpath = "/html/body/div[2]/ul[3]/a")
 	WebElement application_stack;	
 	@FindBy (xpath="//*[@id=\"content\"]/a") WebElement Question_Stack;
     @FindBy(xpath="//textarea[@tabindex='0']") WebElement Stack_pythoninput;
@@ -60,6 +60,23 @@ public class Stack_POM {
 		driver.navigate().back();
 	}
 	
+	public void navigatetoStackpage() {
+		driver.get(ConfigReader.getProperty("Stackpage"));
+	}
+	
+	public void navigatetooperationStack() {
+		driver.get(ConfigReader.getProperty("OperationsinStackpage"));
+	}
+	
+	public void navigatetoTryeditor() {
+		driver.get(ConfigReader.getProperty("tryeditorurl"));
+	}
+	public void navigatetoimplementation() {
+		driver.get(ConfigReader.getProperty("StackImplementationpage"));
+	}
+	public void navigatetoapplication() {
+		driver.get(ConfigReader.getProperty("Applicationstackpage"));
+	}
 	public void navigatetorefresh() {
 		driver.navigate().refresh();
 	}

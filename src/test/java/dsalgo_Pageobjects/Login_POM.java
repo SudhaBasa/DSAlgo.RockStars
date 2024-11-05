@@ -12,8 +12,8 @@ import dsalgo_Utilities.ConfigReader;
 import dsalgo_Utilities.Loggerload;
 
 public class Login_POM {
+	WebDriver driver = DriverFactory.getDriver();
 	
-	public  static WebDriver driver=DriverFactory.getDriver();	
 	boolean isRequired;
 	
 	

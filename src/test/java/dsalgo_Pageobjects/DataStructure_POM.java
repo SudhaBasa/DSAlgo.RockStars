@@ -24,14 +24,14 @@ import org.openqa.selenium.Alert;
 
 public class DataStructure_POM {
 	
-	public static WebDriver driver = DriverFactory.getDriver();
+	WebDriver driver = DriverFactory.getDriver();
 	Utils eleUtil = new Utils();
 	JavascriptExecutor jse = (JavascriptExecutor) driver;
 	Actions actions = new Actions(driver);
 	
 	
 	@FindBy(xpath = "/html/body/div[3]/div[1]/div/div/a")WebElement dsIntrolink;
-	@FindBy(xpath = "/html/body/div[2]/ul/a")WebElement dstimecomplexity;
+	@FindBy(xpath = "//*[@id=\"content\"]/li/a")WebElement dstimecomplexity;
 	@FindBy(xpath = "/html/body/div[2]/div/div[2]/a")WebElement dstryeditor;
 	@FindBy(xpath = "/html/body/div[2]/div/div[1]/div/a")WebElement dspracticequestion;
 	@FindBy(xpath = "//*[@id=\"answer_form\"]/button")WebElement dsrunbutton;
@@ -50,7 +50,7 @@ public class DataStructure_POM {
 
 	public void dsalgo_loginpage() {
 
-		driver.get("https://dsportalapp.herokuapp.com/login");
+		driver.get(ConfigReader.getProperty("loginurl"));
 	}
 
 	public void Login(String username, String password) {
@@ -76,14 +76,14 @@ public class DataStructure_POM {
 		dsIntrolink.click();
 	}
 
-	public void ds_timecomplexity() {
-
-		dstimecomplexity.click();
+	public void navigatetotimecomplexity() {
+		driver.get(ConfigReader.getProperty("TimeComplexity"));
+		//dstimecomplexity.click();
 	}
 
 	public void ds_tryeditor() {
-
-		dstryeditor.click();
+		driver.get(ConfigReader.getProperty("tryEditorUrl"));
+		//dstryeditor.click();
 	}
 
 
@@ -118,19 +118,10 @@ public class DataStructure_POM {
 		driver.switchTo().alert().accept();
 		return errorMsg;
 	}
-	public void dsalgo_Timecomplexitypage() 
-	
+	public void dsalgo_Timecomplexitylink() {	
 		
-		throws InterruptedException
-		{		
-			
-			try {
-				jse.executeScript("window.scrollBy(0, 600)");
-				Thread.sleep(3000);
 				dstimecomplexity.click();
-			} catch (Exception e) {			
-				e.printStackTrace();
-			}
+			
 			}
 	
 	public void navigatetobackbutton() {

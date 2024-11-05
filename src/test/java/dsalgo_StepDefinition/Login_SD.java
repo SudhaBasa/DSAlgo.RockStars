@@ -21,8 +21,7 @@ import io.cucumber.java.en.When;
 public class Login_SD {
 	
 	private ConfigReader reader = new ConfigReader();
-	private WebDriver driver = DriverFactory.getDriver();
-	
+	WebDriver driver = DriverFactory.getDriver();
 	static String username;
 	static String password;
 	static String message;
