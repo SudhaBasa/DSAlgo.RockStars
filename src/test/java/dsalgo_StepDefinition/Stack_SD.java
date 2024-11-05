@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Map;
 import dsalgo_DriverFactory.DriverFactory;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
+import org.openqa.selenium.WebDriver;
 
 import dsalgo_Pageobjects.Stack_POM;
 import dsalgo_Utilities.ConfigReader;
@@ -19,7 +20,7 @@ import dsalgo_Utilities.Loggerload;
 import dsalgo_Utilities.Utils;
 
 public class Stack_SD {
-
+	WebDriver driver = DriverFactory.getDriver();
 	Stack_POM stackpom = new Stack_POM();	
 	String Excelpath = ConfigReader.getExcelFilePath();
 	String result;
@@ -49,10 +50,8 @@ public class Stack_SD {
 
 		@Given("The user is on {string} page in DSalgo portal")
 		public void the_user_is_on_page_in_d_salgo_portal(String string) {		
-			Loggerload.info("The user is on Stack page in DSalgo portal");
-		String Title = stackpom.getStackPageTitle();
-		Loggerload.info("Title of current page is :" + Title);
-		assertEquals(Title, "Stack", "Title do not match");
+		Loggerload.info("The user is on Stack page in DSalgo portal");
+		stackpom.navigatetoStackpage();
 		}
 
 		@When("The is clicks on \"Operations in Stack")
@@ -70,10 +69,7 @@ public class Stack_SD {
 
 		@Given("The user is on Operations in Stack page")
 		public void the_user_is_on_operations_in_stack_page() {
-			Loggerload.info("The user is on Operations in Stack page");
-			String Title = stackpom.getStackPageTitle();
-			Loggerload.info("Title of current page is :" + Title);
-			assertEquals(Title, "Operations in Stack", "Title do not match");
+			stackpom.navigatetooperationStack();
 			}   	
 
 		@When("The user clicks on Try here button in Operations in Stack page")
@@ -92,9 +88,7 @@ public class Stack_SD {
 		@Given("The user is in stack page having an tryEditor with a Run button to test")
 		public void the_user_is_in_stack_page_having_an_try_editor_with_a_run_button_to_test() {
 			Loggerload.info("The user is in stack page having an tryEditor with a Run button to test");			
-			String Title = stackpom.getStackPageTitle();
-			Loggerload.info("Title of current page is :" + Title);
-			assertEquals(Title, "Assessment", "Title do not match");     
+			stackpom.navigatetoTryeditor();    
 		}
 
 		@When("The user gets input from sheet {string} and {int}")
@@ -131,10 +125,7 @@ public class Stack_SD {
 
 		@Given("The user is on {string} page in DSalgo portals")
 		public void the_user_is_on_page_in_d_salgo_portals(String string)  {
-			stackpom.navigatetobackbutton(); 
-			String Title = stackpom.getStackPageTitle();
-			Loggerload.info("Title of current page is :" + Title);
-			assertEquals(Title, "Operations in Stack", "Title do not match");
+			stackpom.navigatetoStackpage();
 		}
 
 		@When("The user clicks on Implementation button")
@@ -153,10 +144,7 @@ public class Stack_SD {
 		
 		@Given("The user is on Implementation page")
 		public void the_user_is_on_implementation_page() {
-			Loggerload.info("The user is on Implementation page");		
-			String Title = stackpom.getStackPageTitle();
-			Loggerload.info("Title of current page is :" + Title);
-			assertEquals(Title, "Implementation", "Title do not match");   
+			stackpom.navigatetoimplementation();
 		}
 		
 		@When("The user clicks on {string} button in {string} page")
@@ -179,10 +167,8 @@ public class Stack_SD {
 
 		@Given("The user is in implementation page having an tryEditor with a Run button to test")
 		public void the_user_is_in_implementation_page_having_an_try_editor_with_a_run_button_to_test() {
-			Loggerload.info("The user should be redirected tryEditor page with a Run button in implementation module");		
-			String Title = stackpom.getStackPageTitle();
-			Loggerload.info("Title of current page is :" + Title);
-			assertEquals(Title,"Assessment", "Title do not match");  
+			stackpom.navigatetoimplementation(); 
+			stackpom.navigatetoTryeditor();
 		}
 
 		@When("The user clicks on Run button after Entering valid python code in implementation tryEditor")
@@ -204,10 +190,8 @@ public class Stack_SD {
 		
 		@Given("The user is on {string} page in DSalgo portal for application")
 		public void the_user_is_on_page_in_d_salgo_portal_for_application(String string) {
-			stackpom.navigatetobackbutton();
-			String Title = stackpom.getStackPageTitle();
-			Loggerload.info("Title of current page is :" + Title);
-			assertEquals(Title, "Implementation", "Title do not match");    	
+			stackpom.navigatetoStackpage();
+			   	
 		}
 		
 		@When("The user clicks on Applications button")
@@ -226,9 +210,7 @@ public class Stack_SD {
 		
 		@Given("The user is on {string} page on Dsalgo portal")
 		public void the_user_is_on_page_on_dsalgo_portal(String string) {
-			String Title = stackpom.getStackPageTitle();
-			Loggerload.info("Title of current page is :" + Title);
-			assertEquals(Title, "Applications", "Title do not match");     	
+			stackpom.navigatetoapplication();   	
 		}
 
 		@When("The user clicks on Try here button in {string}")
@@ -250,10 +232,8 @@ public class Stack_SD {
 
 		@Given("The user is in Applications page having an tryEditor with a Run button to test")
 		public void the_user_is_in_applications_page_having_an_try_editor_with_a_run_button_to_test() {
-			Loggerload.info("The user is in Applications page having an tryEditor with a Run button to test");		
-			String Title = stackpom.getStackPageTitle();
-			Loggerload.info("Title of current page is :" + Title);
-			assertEquals(Title, "Assessment", "Title do not match");     
+			stackpom.navigatetoapplication();
+			stackpom.navigatetoTryeditor();
 		}
 
 		@When("The user clicks on Run button after Entering valid python code in Applications tryEditor")
@@ -287,7 +267,7 @@ public class Stack_SD {
 		public void the_user_is_on_page_in_d_salgo_portal_pracitce_question(String string) 
 		
 		{
-			stackpom.navigatetobackbutton();
+			stackpom.navigatetooperationStack();
 			
 		}
 

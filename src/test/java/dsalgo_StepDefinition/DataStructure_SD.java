@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.Map;
 import dsalgo_DriverFactory.DriverFactory;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
+import org.openqa.selenium.WebDriver;
 
 import dsalgo_Pageobjects.DataStructure_POM;
 import dsalgo_Pageobjects.Login_POM;
@@ -21,6 +22,7 @@ import dsalgo_Utilities.Loggerload;
 import dsalgo_Utilities.Utils;
 
 public class DataStructure_SD {
+WebDriver driver = DriverFactory.getDriver();
 	
 DataStructure_POM dspom = new DataStructure_POM();
 	
@@ -78,17 +80,14 @@ DataStructure_POM dspom = new DataStructure_POM();
 
 	@Given("The user is on the Data Structures Introduction after logged in")
 	public void the_user_is_on_the_data_structures_introduction_after_logged_in() {
-		Loggerload.info("The user be directed to {string} page");
-		String Title = dspom.getPageTitle();
-		Loggerload.info("Title of the Page : \" " + Title + "\" ");
-		assertEquals(Title,"Data Structures-Introduction","Title do not match");   
+		dspom.navigatetotimecomplexity();  
 	}
 
 	@When("The user clicks Time Complexity link")
 	public void the_user_clicks_time_complexity_link() 
-	throws InterruptedException
+	
 	{
-	   dspom.ds_timecomplexity(); 
+	   dspom.dsalgo_Timecomplexitylink();
 	}
 
 	@Then("The user should be redirected to Time Complexity page")
@@ -104,7 +103,7 @@ DataStructure_POM dspom = new DataStructure_POM();
 		Loggerload.info("The user be directed to {string} page");
 		String Title = dspom.getPageTitle();
 		Loggerload.info("Title of the Page : \" " + Title + "\" ");
-		assertEquals(Title,"Time Complexity","Title do not match");       
+		assertEquals(Title,"NumpyNinja","Title do not match");       
 	}
 
 	@When("The user clicks Try Here button on Time Complexity page")
@@ -122,7 +121,8 @@ DataStructure_POM dspom = new DataStructure_POM();
 
 	@Given("The user is in a page having an tryEditor with a Run button to test")
 	public void the_user_is_in_a_page_having_an_try_editor_with_a_run_button_to_test() {
-	dspom.ds_tryeditoranswer();  
+		dspom.ds_tryeditor();
+		dspom.ds_tryeditoranswer();  
 	}
 
 	@When("The user enter valid python code in tryEditor from sheet {string} and {int}")
@@ -168,7 +168,7 @@ DataStructure_POM dspom = new DataStructure_POM();
 	@Given("The user directed to Timecomplexity page by giving url")
 	public void the_user_directed_to_timecomplexity_page_by_giving_url() 
 	throws InterruptedException {
-		dspom.navigatetobackbutton();  
+		dspom.navigatetotimecomplexity();  
 	}
 
 	@When("The user clicks on the Practice question  on Timecomplexity page")

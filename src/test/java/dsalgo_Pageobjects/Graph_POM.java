@@ -22,8 +22,8 @@ import org.openqa.selenium.Alert;
 
 public class Graph_POM {
 
-	public static WebDriver driver = DriverFactory.getDriver();
-  Utils eleUtil = new Utils();
+	WebDriver driver = DriverFactory.getDriver();
+    Utils eleUtil = new Utils();
 	JavascriptExecutor jse = (JavascriptExecutor) driver;
 	Actions actions = new Actions(driver);
 	
@@ -35,7 +35,7 @@ public class Graph_POM {
     @FindBy (xpath="//*[@id=\"answer_form\"]/div/div/div[6]/div[1]/div/div/div/div[5]/div/pre")WebElement editor_Input;
     @FindBy (xpath="//*[@id=\"answer_form\"]/button") WebElement Run_button;
     @FindBy (xpath = "//*[@id=\"content\"]/a") WebElement Graph_Practiceqn;
-    @FindBy (xpath="//*[@id=\"content\"]/li[2]/a") WebElement Graph_representation;
+    @FindBy (xpath="/html/body/div[2]/ul[3]/a") WebElement Graph_representation;
     @FindBy (xpath="//*[@id=\"output\"]")WebElement Output;
     @FindBy(xpath = "//a[@href='/tryEditor']")WebElement tryhere_Graph;	
     
@@ -80,7 +80,21 @@ public class Graph_POM {
 				e.printStackTrace();
 			}
 			}
-		
+	public void navigatetoGrapgPage() {
+		driver.get(ConfigReader.getProperty("graphurl"));
+	}
+	
+	public void navigatetoGrapGraphgPage() {
+		driver.get(ConfigReader.getProperty("graphgraphurl"));
+	}
+	
+	public void navigatetotryeditor() {
+		driver.get(ConfigReader.getProperty("tryeditorurl"));
+	}
+	
+	public void navigatetographrepresentation() {
+		driver.get(ConfigReader.getProperty("graphrepresentationsurl"));
+	}
 			
     public void Graph_Graphlink() {
     	Graph_link.click();

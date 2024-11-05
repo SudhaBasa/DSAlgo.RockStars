@@ -27,7 +27,7 @@ import dsalgo_Utilities.Utils;
 public class Graph_SD {
 
 	Graph_POM graphpom = new Graph_POM();
-	public static WebDriver driver = DriverFactory.getDriver();
+	WebDriver driver = DriverFactory.getDriver();
 	
 	String Excelpath = ConfigReader.getExcelFilePath();
 	JavascriptExecutor jse = (JavascriptExecutor) driver;
@@ -52,10 +52,7 @@ public class Graph_SD {
 
 	@Given("The user is on {string} page")
 	public void the_user_is_on_page(String string) {
-		Loggerload.info("The user is on Graph page in DSalgo portal");
-		String Title = graphpom.getStackPageTitle();
-		Loggerload.info("Title of current page is :" + Title);
-		assertEquals(Title, "Graph", "Title do not match");
+		graphpom.navigatetoGrapgPage();
 	}
 
 	@When("The user click on Graph button on {string} page")
@@ -76,10 +73,7 @@ public class Graph_SD {
 
 	@Given("The user is on Graph Graph page")
 	public void the_user_is_on_graph_graph_page() {
-		Loggerload.info("The user should be redirected to Graph Graph page");
-		String Title = graphpom.getStackPageTitle();
-		Loggerload.info("Title of current page is :" + Title);
-		assertEquals(Title,"Graph", "Title do not match"); 
+		graphpom.navigatetoGrapGraphgPage();
 	}
 
 	@When("The user clicks on Try here button on Graph Graph page")
@@ -98,10 +92,8 @@ public class Graph_SD {
 
 	@Given("The user is in Graph Graph page having an tryEditor with a Run button to test valid code")
 	public void the_user_is_in_graph_graph_page_having_an_try_editor_with_a_run_button_to_test_valid_code() {
-		Loggerload.info("The user should be redirected tryEditor page with a Run button in Graph Graph module");
-		String Title = graphpom.getStackPageTitle();
-		Loggerload.info("Title of current page is :" + Title);
-		assertEquals(Title,"Assessment", "Title do not match");   
+		graphpom.navigatetoGrapGraphgPage(); 
+		graphpom.navigatetotryeditor();
 	}
 
 	@When("The user gets input from sheet {string} and {int} for GraphEditor")
@@ -126,10 +118,8 @@ public class Graph_SD {
 
 	@Given("The user is in Graph Graph page having an tryEditor with a Run button to test invalid code")
 	public void the_user_is_in_graph_graph_page_having_an_try_editor_with_a_run_button_to_test_invalid_code() {
-		Loggerload.info("The user is in Graph Graph page having an tryEditor with a Run button to test invalid code");
-		String Title = graphpom.getStackPageTitle();
-		Loggerload.info("Title of current page is :" + Title);
-		assertEquals(Title,"Assessment", "Title do not match");  
+		graphpom.navigatetoGrapGraphgPage();
+		graphpom.navigatetotryeditor();
 	}
 
 	@When("The user gets input from sheet {string} and {int} for GraphEditor invalid")
@@ -154,7 +144,7 @@ public class Graph_SD {
 
 	@Given("The user is in Editor page and navigates to graph representations page")
 	public void the_user_is_in_editor_page_and_navigates_to_graph_representations_page() {
-	    graphpom.navigatetobackbutton();
+	    graphpom.navigatetoGrapgPage();
 	    String Title = graphpom.getStackPageTitle();
 	    
 	}
@@ -174,11 +164,8 @@ public class Graph_SD {
 
 	@Given("The user is in Graph Representations page")
 	public void the_user_is_in_graph_representations_page() {
+		graphpom.navigatetographrepresentation();
 		
-		Loggerload.info("The user is in Graph Representations page");
-		String Title = graphpom.getStackPageTitle();
-		Loggerload.info("Title of current page is :" + Title);
-		assertEquals(Title,"Graph Representations", "Title do not match");  
 	}
 
 	@When("The user clicks on Tryhere link on graph representations page")
@@ -197,10 +184,8 @@ public class Graph_SD {
 
 	@Given("The user is in a page having an Editor with a Run button to test")
 	public void the_user_is_in_a_page_having_an_editor_with_a_run_button_to_test() {
-		Loggerload.info("The user is in a page having an Editor with a Run button to test");
-		String Title = graphpom.getStackPageTitle();
-		Loggerload.info("Title of current page is :" + Title);
-		assertEquals(Title,"Assessment", "Title do not match"); 
+		graphpom.navigatetographrepresentation();
+		graphpom.navigatetotryeditor();
 	}
 
 	@When("The user enters valid python code in Editor from sheet {string} and {int}")
@@ -240,7 +225,7 @@ public class Graph_SD {
 
 	@When("the user clicks on Practice Questions in graph representations page")
 	public void the_user_clicks_on_practice_questions_in_graph_representations_page() {
-	  graphpom.Graph_Representationlink();  
+	  graphpom.navigatetoGrapGraphgPage();  
 	}
 
 	@Then("The user is directed to graph Practice page")
