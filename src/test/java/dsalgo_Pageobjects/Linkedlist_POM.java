@@ -18,7 +18,7 @@ import dsalgo_Utilities.ExcelReading;
 import dsalgo_Utilities.Utils;
 import dsalgo_Utilities.ConfigReader;
 
-public class Linkedlist_page {
+public class Linkedlist_POM {
 	
 	private WebDriver driver;
 	private ConfigReader configObj = new ConfigReader();
@@ -46,7 +46,7 @@ public class Linkedlist_page {
 	@FindBy (id = "output") WebElement output;
 	@FindBy (xpath = "//a[@href='/linked-list/practice']") WebElement Practise_Qtns;
 		
-	public Linkedlist_page(WebDriver browserDriver) {
+	public Linkedlist_POM(WebDriver browserDriver) {
 		driver = browserDriver;
 		PageFactory.initElements(driver,this);
 		}

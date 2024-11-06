@@ -17,7 +17,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import dsalgo_Utilities.Utils;
 
-public class Arrays_page {
+public class Arrays_POM {
 	
 	private WebDriver driver;
 	Utils utils = new Utils();
@@ -44,7 +44,7 @@ public class Arrays_page {
 	@FindBy (id = "output") WebElement QtnOutPut;
 	
 
-	public Arrays_page(WebDriver browserDriver) {
+	public Arrays_POM(WebDriver browserDriver) {
 		driver = browserDriver;
 		PageFactory.initElements(driver,this);
 	}

@@ -10,18 +10,18 @@ import org.openqa.selenium.interactions.Actions;
 
 import dsalgo_DriverFactory.DriverFactory;
 import dsalgo_Utilities.ConfigReader;
-import dsalgo_Pageobjects.Arrays_page;
-import dsalgo_Pageobjects.Home_page;
+import dsalgo_Pageobjects.Arrays_POM;
+import dsalgo_Pageobjects.HomePage_POM;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class Array_step {
+public class Array_SD {
 	
 	private ConfigReader reader = new ConfigReader();
 	private WebDriver driver = DriverFactory.getDriver();
-	private Arrays_page Array = new Arrays_page(driver);
-	private Home_page homePage = new Home_page();
+	private Arrays_POM Array = new Arrays_POM(driver);
+	private HomePage_POM homePage = new HomePage_POM();
 	
 
 	@Given("The user is on the Home Page after logged in")

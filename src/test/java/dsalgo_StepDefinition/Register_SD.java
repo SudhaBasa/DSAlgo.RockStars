@@ -19,7 +19,7 @@ import org.testng.Assert;
 import com.fasterxml.jackson.databind.annotation.JsonAppend.Prop;
 
 import dsalgo_DriverFactory.DriverFactory;
-import dsalgo_Pageobjects.Home_page;
+import dsalgo_Pageobjects.HomePage_POM;
 import dsalgo_Pageobjects.RegisterPage;
 import dsalgo_Utilities.ConfigReader;
 import dsalgo_Utilities.Loggerload;
@@ -30,7 +30,7 @@ import io.cucumber.java.en.When;
 
 public class Register_SD {
 	RegisterPage register = new RegisterPage();
-	Home_page homepage = new Home_page();
+	HomePage_POM homepage = new HomePage_POM();
 	
 	
 	// WebDriver driver = DriverFactory.getDriver();
