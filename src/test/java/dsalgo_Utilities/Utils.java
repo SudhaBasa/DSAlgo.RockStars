@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -39,5 +40,17 @@ public class Utils {
 	public void enterCode(String code, WebElement element) {
 
 		new Actions(driver).sendKeys(element, code).perform();
+	}
+	public void enterCodePractice(String code, WebElement element, WebDriver driver) throws InterruptedException {
+		new Actions(driver).keyDown(Keys.CONTROL).sendKeys("a").keyUp(Keys.CONTROL).sendKeys(Keys.DELETE).perform();
+		String[] str1 = code.split("\n");
+		for (int i = 0; i < str1.length; i++) {
+			if (str1[i].equalsIgnoreCase("\\b")) {
+				element.sendKeys(Keys.BACK_SPACE);
+			} else {
+				element.sendKeys(str1[i]);
+				element.sendKeys(Keys.RETURN);
+			}
+		}
 	}
 }

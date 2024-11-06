@@ -192,7 +192,7 @@ public class Home_page {
 		case "Tree":
 			getstarted_tree.click();
 			break;
-		case ",Graph":
+		case "Graph":
 			getstarted_graph.click();
 			break;
 		default:
