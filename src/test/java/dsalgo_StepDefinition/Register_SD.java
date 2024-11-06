@@ -20,7 +20,7 @@ import com.fasterxml.jackson.databind.annotation.JsonAppend.Prop;
 
 import dsalgo_DriverFactory.DriverFactory;
 import dsalgo_Pageobjects.HomePage_POM;
-import dsalgo_Pageobjects.RegisterPage;
+import dsalgo_Pageobjects.Register_POM;
 import dsalgo_Utilities.ConfigReader;
 import dsalgo_Utilities.Loggerload;
 import io.cucumber.datatable.DataTable;
@@ -29,7 +29,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class Register_SD {
-	RegisterPage register = new RegisterPage();
+	Register_POM register = new Register_POM();
 	HomePage_POM homepage = new HomePage_POM();
 	
 	
