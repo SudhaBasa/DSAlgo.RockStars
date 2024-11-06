@@ -38,10 +38,15 @@ public class Hooks {
 
 	@After
 	public void tearDown(Scenario scenario) throws InterruptedException {
-		Loggerload.error("Scenario is Failed and taking Screenshot");
+
 		String scenarioName=scenario.getName().replaceAll(" ", "_");
 		
 		if (scenario.isFailed()) {
+			Loggerload.error("Scenario is Failed and taking Screenshot");
+			
+			byte[] screenShot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
+			scenario.attach(screenShot, "image/png", scenarioName);
+			
 	        File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 	        try {
 	            FileUtils.copyFile(screenshot, new File("target/screenshots/" + scenario.getName() + ".png"));

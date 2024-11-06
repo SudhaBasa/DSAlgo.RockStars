@@ -8,18 +8,18 @@ import org.openqa.selenium.WebDriver;
 
 import dsalgo_DriverFactory.DriverFactory;
 import dsalgo_Utilities.ConfigReader;
-import dsalgo_Pageobjects.Home_page;
-import dsalgo_Pageobjects.Linkedlist_page;
+import dsalgo_Pageobjects.HomePage_POM;
+import dsalgo_Pageobjects.Linkedlist_POM;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class Linkedlist_step {
+public class LinkedList_SD {
 	
 	private ConfigReader reader = new ConfigReader();
 	private WebDriver driver = DriverFactory.getDriver();
-	private Linkedlist_page linkedList = new Linkedlist_page(driver);
-	private Home_page homePage = new Home_page();
+	private Linkedlist_POM linkedList = new Linkedlist_POM(driver);
+	private HomePage_POM homePage = new HomePage_POM();
 	
 //	@Given("The user is on Sign In Page of DS Algo Portal")
 //	public void the_user_is_on_sign_in_page_of_ds_algo_portal() {
