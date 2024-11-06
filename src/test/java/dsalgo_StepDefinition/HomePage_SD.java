@@ -8,18 +8,18 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 import dsalgo_DriverFactory.DriverFactory;
-import dsalgo_Pageobjects.Home_page;
+import dsalgo_Pageobjects.HomePage_POM;
 import dsalgo_Utilities.ConfigReader;
 import dsalgo_Utilities.Loggerload;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class Homepage_step {
+public class HomePage_SD {
 	
 	private ConfigReader reader = new ConfigReader();
 	private WebDriver driver = DriverFactory.getDriver();
-	private Home_page homepage = new Home_page();
+	private HomePage_POM homepage = new HomePage_POM();
 	
 	// @TS_Register_01
 		@Given("The user opens DSAlgo portal link")

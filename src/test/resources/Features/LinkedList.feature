@@ -68,7 +68,108 @@ Examples:
       | Sheetname  | RowNumber |
       | dsalgocode |         1 |
 
+Scenario Outline: The user is able to see output in the console when run with valid code in "Creating Linked LIst" TryEditor page
+Given The user is on the Linked list tryEditor page
+When The user writes the valid python code from "<Sheetname>" and <RowNumber> and clicks the Run button
+Then The user is able to see the output inside the console.
+Examples: 
+      | Sheetname  | RowNumber |
+      | dsalgocode |         0 |
 
+@Linkedlist_06
+Scenario Outline: The user is able to see error message when run with invalid code in "Creating Linked LIst" TryEditor page
+Given The user is on the Linked list tryEditor page
+When The user writes the invalid python code from "<Sheetname>" and <RowNumber> and clicks the Run button
+Then The user should see an error message in alert window
+Examples: 
+      | Sheetname  | RowNumber |
+      | dsalgocode |         1 |
+
+Scenario Outline: The user is able to see output in the console when run with valid code in "Types of Linked List" TryEditor page
+Given The user is on the Linked list tryEditor page
+When The user writes the valid python code from "<Sheetname>" and <RowNumber> and clicks the Run button
+Then The user is able to see the output inside the console.
+Examples: 
+      | Sheetname  | RowNumber |
+      | dsalgocode |         0 |
+
+@Linkedlist_06
+Scenario Outline: The user is able to see error message when run with invalid code in "Types of Linked List" TryEditor page
+Given The user is on the Linked list tryEditor page
+When The user writes the invalid python code from "<Sheetname>" and <RowNumber> and clicks the Run button
+Then The user should see an error message in alert window
+Examples: 
+      | Sheetname  | RowNumber |
+      | dsalgocode |         1 |
+
+Scenario Outline: The user is able to see output in the console when run with valid code in "Implement Linked List in Python" TryEditor page
+Given The user is on the Linked list tryEditor page
+When The user writes the valid python code from "<Sheetname>" and <RowNumber> and clicks the Run button
+Then The user is able to see the output inside the console.
+Examples: 
+      | Sheetname  | RowNumber |
+      | dsalgocode |         0 |
+
+@Linkedlist_06
+Scenario Outline: The user is able to see error message when run with invalid code in "Implement Linked List in Python" TryEditor page
+Given The user is on the Linked list tryEditor page
+When The user writes the invalid python code from "<Sheetname>" and <RowNumber> and clicks the Run button
+Then The user should see an error message in alert window
+Examples: 
+      | Sheetname  | RowNumber |
+      | dsalgocode |         1 |
+      
+Scenario Outline: The user is able to see output in the console when run with valid code in "Traversal" TryEditor page
+Given The user is on the Linked list tryEditor page
+When The user writes the valid python code from "<Sheetname>" and <RowNumber> and clicks the Run button
+Then The user is able to see the output inside the console.
+Examples: 
+      | Sheetname  | RowNumber |
+      | dsalgocode |         0 |
+
+@Linkedlist_06
+Scenario Outline: The user is able to see error message when run with invalid code in "Traversal" TryEditor page
+Given The user is on the Linked list tryEditor page
+When The user writes the invalid python code from "<Sheetname>" and <RowNumber> and clicks the Run button
+Then The user should see an error message in alert window
+Examples: 
+      | Sheetname  | RowNumber |
+      | dsalgocode |         1 |  
+      
+Scenario Outline: The user is able to see output in the console when run with valid code in "Insertion" TryEditor page
+Given The user is on the Linked list tryEditor page
+When The user writes the valid python code from "<Sheetname>" and <RowNumber> and clicks the Run button
+Then The user is able to see the output inside the console.
+Examples: 
+      | Sheetname  | RowNumber |
+      | dsalgocode |         0 |
+
+@Linkedlist_06
+Scenario Outline: The user is able to see error message when run with invalid code in "Insertion" TryEditor page
+Given The user is on the Linked list tryEditor page
+When The user writes the invalid python code from "<Sheetname>" and <RowNumber> and clicks the Run button
+Then The user should see an error message in alert window
+Examples: 
+      | Sheetname  | RowNumber |
+      | dsalgocode |         1 |    
+      
+Scenario Outline: The user is able to see output in the console when run with valid code in "Deletion" TryEditor page
+Given The user is on the Linked list tryEditor page
+When The user writes the valid python code from "<Sheetname>" and <RowNumber> and clicks the Run button
+Then The user is able to see the output inside the console.
+Examples: 
+      | Sheetname  | RowNumber |
+      | dsalgocode |         0 |
+
+@Linkedlist_06
+Scenario Outline: The user is able to see error message when run with invalid code in "Deletion" TryEditor page
+Given The user is on the Linked list tryEditor page
+When The user writes the invalid python code from "<Sheetname>" and <RowNumber> and clicks the Run button
+Then The user should see an error message in alert window
+Examples: S
+      | Sheetname  | RowNumber |
+      | dsalgocode |         1 |    
+                              
 @Linkedlist_7
 Scenario: The user is able to navigate to Practice Questions page of linked list
 Given The user is on the Deletion page

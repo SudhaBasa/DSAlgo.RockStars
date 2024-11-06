@@ -12,7 +12,7 @@ import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.openqa.selenium.WebDriver;
 
 import dsalgo_DriverFactory.DriverFactory;
-import dsalgo_Pageobjects.Home_page;
+import dsalgo_Pageobjects.HomePage_POM;
 import dsalgo_Pageobjects.QueuePage;
 import dsalgo_Pageobjects.RegisterPage;
 import dsalgo_Utilities.ConfigReader;
@@ -23,7 +23,7 @@ import io.cucumber.java.en.When;
 
 public class Queue_SD {
 	WebDriver driver = DriverFactory.getDriver();
-	Home_page homePage = new Home_page();
+	HomePage_POM homePage = new HomePage_POM();
 	RegisterPage register = new RegisterPage();
 	QueuePage queuePage = new QueuePage();
 	String expectedMsg;

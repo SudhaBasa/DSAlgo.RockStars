@@ -2,7 +2,7 @@ package dsalgo_StepDefinition;
 
 import static org.testng.Assert.assertEquals;
 
-import dsalgo_Pageobjects.Home_page;
+import dsalgo_Pageobjects.HomePage_POM;
 import dsalgo_Pageobjects.TreePage;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -10,7 +10,7 @@ import io.cucumber.java.en.When;
 
 public class Tree_SD {
 
-	Home_page homePage = new Home_page();
+	HomePage_POM homePage = new HomePage_POM();
 	TreePage treePage = new TreePage();
 
 	@Given("The User is on Home Page after logged in")
