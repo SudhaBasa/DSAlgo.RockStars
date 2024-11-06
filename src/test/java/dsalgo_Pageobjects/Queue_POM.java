@@ -16,7 +16,7 @@ import dsalgo_Utilities.ConfigReader;
 import dsalgo_Utilities.Loggerload;
 import dsalgo_Utilities.Utils;
 
-public class QueuePage {
+public class Queue_POM {
 
 	WebDriver driver = DriverFactory.getDriver();
 	Utils utils = new Utils();
@@ -49,7 +49,7 @@ public class QueuePage {
 	@FindBy(id = "output")
 	WebElement output;
 
-	public QueuePage() {
+	public Queue_POM() {
 		PageFactory.initElements(driver, this);
 	}
 	
