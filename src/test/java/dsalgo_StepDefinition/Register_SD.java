@@ -33,9 +33,6 @@ public class Register_SD {
 	Home_page homepage = new Home_page();
 	
 	
-	// WebDriver driver = DriverFactory.getDriver();
-//	String registerUsername;
-
 	// @TS_Register_01 is in Home_SD
 
 	@Given("The user opens Register Page")
@@ -124,27 +121,5 @@ public class Register_SD {
 
 	}
 
-	// @TS_Register_07
-//	@Given("The user is on signin page")
-//	public void the_user_is_on_signin_page() {
-//		Loggerload.info("The user is signing into the account on Home Page");
-//		ConfigReader.getProperty("appHomeURL");
-//		homePage.clickOnSignInLink();
-//	}
-//
-//	@When("The user enter valid {string} and {string}")
-//	public void the_user_enter_valid_and(String username, String password) {
-//		Loggerload.info("The user logins with valid Username and Password ");
-//		// register.enterUserName(username);
-//		homePage.enterUsername(username);
-//		homePage.enterLoginPwd(password);
-//		homePage.clickOnLoginBtn();
-//	}
-//
-//	@Then("click login button to verify")
-//	public void click_login_button_to_verify() {
-//		Loggerload.info("The user is validating Page Title on HomePage ");
-//		assertEquals("NumpyNinja", homePage.getPageTitle());
-//	}
-//
+	
 }

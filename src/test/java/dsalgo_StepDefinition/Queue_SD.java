@@ -28,29 +28,6 @@ public class Queue_SD {
 	QueuePage queuePage = new QueuePage();
 	String expectedMsg;
 
-//
-////Background
-//	@Given("The user is on Sign In Page of DS Algo Portal")
-//	public void the_user_is_on_sign_in_page_of_ds_algo_portal() {
-//		Loggerload.info("The user is signing into the account on Home Page");
-//		ConfigReader.getProperty("appHomeURL");
-//		homePage.clickOnSignInLink();
-//	}
-//
-//	@When("The user logins with valid {string} and {string}")
-//	public void the_user_logins_with_valid_and(String username, String password) {
-//		Loggerload.info("The user logins with valid Username and Password ");
-//
-//		register.enterUserName(username);
-//		homePage.enterLoginPwd(password);
-//		homePage.clickOnLoginBtn();
-//	}
-//
-//	@Then("The user is navigated to homepage")
-//	public void the_user_is_navigated_to_homepage() {
-//		Loggerload.info("The user is validating Page Title on HomePage ");
-//		assertEquals("NumpyNinja", homePage.getPageTitle());
-//	}
 
 //  @TS_Queue_01
 	@Given("The user is on Home Page after logged in")
@@ -197,10 +174,7 @@ public class Queue_SD {
 	public void the_user_is_on_implementation_using_collections_deque_page() {
 		queuePage.navigateToImpUsingCollecDequeLink();
 	}
-//
-//@Then("The user is able to see the output in console")
-//public void the_user_is_able_to_see_the_output_in_console() {
-//}
+
 
 //  @TS_Queue_10
 	@When("The user clicks on Implementation using Array link")

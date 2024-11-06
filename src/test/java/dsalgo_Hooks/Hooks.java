@@ -20,7 +20,6 @@ import io.cucumber.java.Before;
 import io.cucumber.java.BeforeAll;
 import io.cucumber.java.Scenario;
 
-
 public class Hooks {
 	public static WebDriver driver;
 
@@ -32,25 +31,28 @@ public class Hooks {
 		driver.manage().deleteAllCookies();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		
+
 	}
-	
 
 	@After
 	public void tearDown(Scenario scenario) throws InterruptedException {
-		Loggerload.error("Scenario is Failed and taking Screenshot");
-		String scenarioName=scenario.getName().replaceAll(" ", "_");
-		
+
+		String scenarioName = scenario.getName().replaceAll(" ", "_");
+
 		if (scenario.isFailed()) {
-	        File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-	        try {
-	            FileUtils.copyFile(screenshot, new File("target/screenshots/" + scenario.getName() + ".png"));
-	        } catch (IOException e) {
-	            e.printStackTrace();
-	        }
-	    }
-		
-		
+			Loggerload.error("Scenario is Failed and taking Screenshot");
+
+			byte[] screenShot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+			scenario.attach(screenShot, "image/png", scenarioName);
+
+			File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+			try {
+				FileUtils.copyFile(screenshot, new File("target/screenshots/" + scenario.getName() + ".png"));
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+
 		Thread.sleep(3000);
 		driver.quit();
 

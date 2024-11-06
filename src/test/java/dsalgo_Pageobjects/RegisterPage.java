@@ -89,8 +89,6 @@ public class RegisterPage {
 //		for (Map<String, String> data : dataMap) {
 //			String user = data.get("username");
 //			userName.sendKeys(user);
-//			
-//			
 //		}
 
 //			Map<String, String> data = dataTable.asMap(String.class, String.class);
