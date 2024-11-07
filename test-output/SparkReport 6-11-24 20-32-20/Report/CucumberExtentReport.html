@@ -1,0 +1,1425 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title></title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ce8b10435bcbae260c334c0d0c6b61d2c19b6168/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css"></style></head><body class="spa bdd-report standard">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary"></span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Nov 6, 2024 08:32:20 PM</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('exception-view')">
+<a id="nav-exception" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bug"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('category-view')">
+<a id="nav-category" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-tag"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
+<ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" href="#">@TS_Register_02</a><a class="dropdown-item" href="#">@TS_Register_04</a><a class="dropdown-item" href="#">@Register</a><a class="dropdown-item" href="#">@TS_Register_03</a><a class="dropdown-item" href="#">@TS_Register_01</a><a class="dropdown-item" href="#">@all</a><a class="dropdown-item" href="#">@TS_Register_05</a><a class="dropdown-item" href="#">@TS_Register_06</a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="fail" test-id="1"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Testing functionality of Register Page</p>
+            <p class="text-sm">
+              <span>8:32:21 PM</span> / <span>00:01:06:083</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Testing functionality of Register Page</h5>
+<span class='badge badge-success'>11.06.2024 8:32:21 PM</span>
+<span class='badge badge-danger'>11.06.2024 8:33:27 PM</span>
+<span class='badge badge-default'>00:01:06:083</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5"></div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>The user launches home page of DSAlgo Project</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="dsalgo_StepDefinition.HomePage_SD.the_user_opens_ds_algo_portal_link()">
+                <span>Given The user opens DSAlgo portal link</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgo_StepDefinition.HomePage_SD.the_user_clicks_on_button(java.lang.String)">
+                <span>When The user clicks on "Get Started" button</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgo_StepDefinition.HomePage_SD.the_user_should_be_navigated_to_home_page()">
+                <span>Then The User should be navigated to Home Page</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="8"><span class="badge log pass-bg mr-2">Pass</span>The user Registers account with empty fields</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="dsalgo_StepDefinition.Register_SD.the_user_opens_register_page()">
+                <span>Given The user opens Register Page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgo_StepDefinition.Register_SD.the_user_clicks_button_with_all_fields_empty()">
+                <span>When The user clicks Register button with all fields empty</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgo_StepDefinition.Register_SD.the_error_appears_below_username_textbox(java.lang.String)">
+                <span>Then The error "Please fill out this field." appears below Username textbox</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="14"><span class="badge log pass-bg mr-2">Pass</span>The user Registers account with  Username and other fields empty</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="dsalgo_StepDefinition.Register_SD.the_user_opens_register_page()">
+                <span>Given The user opens Register Page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgo_StepDefinition.Register_SD.the_user_clicks_button_after_entering_username_with_other_fields_empty(io.cucumber.datatable.DataTable)">
+                <span>When The user clicks Register button after entering Username with other fields empty</span>
+      <div><table class='markup-table table '><tr><td>username</td></tr><tr><td>Raha_a@123</td></tr></table>
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgo_StepDefinition.Register_SD.the_error_message_appears_below_password_textbox(java.lang.String)">
+                <span>Then The error message "Please fill out this field." appears below Password textbox</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="20"><span class="badge log pass-bg mr-2">Pass</span>The user Registers account with username, password and Confirm Password empty</div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="dsalgo_StepDefinition.Register_SD.the_user_opens_register_page()">
+                <span>Given The user opens Register Page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgo_StepDefinition.Register_SD.the_user_clicks_button_after_entering_username_and_password_with_password_confirmation_field_empty(io.cucumber.datatable.DataTable)">
+                <span>When The user clicks Register button after entering Username and password with Password Confirmation field empty</span>
+      <div><table class='markup-table table '><tr><td>username</td><td>password</td></tr><tr><td>Raha_a@123</td><td>aha_1@456</td></tr></table>
+      </div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="dsalgo_StepDefinition.Register_SD.the_error_message_appears_below_password_confirmation_textbox(java.lang.String)">
+                <span>Then The error message "Please fill out this field." appears below Password Confirmation textbox</span>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="26"><span class="badge log fail-bg mr-2">Fail</span>The user Registers with invalid Details</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
+      </div>
+    </div>
+        <div class="scenario_outline ">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="27"><span class="badge log fail-bg mr-2">Fail</span>The user Registers with invalid Details</div>
+                    <div class="status-avatar float-right">
+                      <i class="fa fa-paperclip"></i>
+                    </div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step pass-bg">
+                    <span>Given The user opens Register Page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When The user enters  "Lillyy_1@991" and "testPassword@1" and "testPassword@1"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step fail-bg">
+                    <span>Then The user should be able to see the error msg "username already exists"</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.AssertionError: Error Message is incorrect expected [username already exists] but found [password_mismatch:The two password fields didn’t match.]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at dsalgo_StepDefinition.Register_SD.the_user_should_be_able_to_see_the_error_msg(Register_SD.java:106)
+	at ✽.The user should be able to see the error msg "username already exists"(file:///C:/work/DSAlgo.RockStars/src/test/resources/Features/Register.feature:36)
+</textarea>
+      
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>dsalgo_Hooks.Hooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>The_user_Registers_with_invalid_Details
+          <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='../Screenshots/embedded1.png' src="../Screenshots/embedded1.png">
+  
+    
+
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="33"><span class="badge log fail-bg mr-2">Fail</span>The user Registers with invalid Details</div>
+                    <div class="status-avatar float-right">
+                      <i class="fa fa-paperclip"></i>
+                    </div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step pass-bg">
+                    <span>Given The user opens Register Page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When The user enters  "Raha_a@123" and "ah_1@4" and "ah_1@4"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step fail-bg">
+                    <span>Then The user should be able to see the error msg "Password should be atleast 8 characters"</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.AssertionError: Error Message is incorrect expected [Password should be atleast 8 characters] but found [password_mismatch:The two password fields didn’t match.]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at dsalgo_StepDefinition.Register_SD.the_user_should_be_able_to_see_the_error_msg(Register_SD.java:106)
+	at ✽.The user should be able to see the error msg "Password should be atleast 8 characters"(file:///C:/work/DSAlgo.RockStars/src/test/resources/Features/Register.feature:36)
+</textarea>
+      
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>dsalgo_Hooks.Hooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>The_user_Registers_with_invalid_Details
+          <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='../Screenshots/embedded2.png' src="../Screenshots/embedded2.png">
+  
+    
+
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="39"><span class="badge log fail-bg mr-2">Fail</span>The user Registers with invalid Details</div>
+                    <div class="status-avatar float-right">
+                      <i class="fa fa-paperclip"></i>
+                    </div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step pass-bg">
+                    <span>Given The user opens Register Page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When The user enters  "&&**&&**" and "aha_1@456" and "aha_1@456"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step fail-bg">
+                    <span>Then The user should be able to see the error msg "Please enter a valid username"</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.AssertionError: Error Message is incorrect expected [Please enter a valid username] but found [password_mismatch:The two password fields didn’t match.]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at dsalgo_StepDefinition.Register_SD.the_user_should_be_able_to_see_the_error_msg(Register_SD.java:106)
+	at ✽.The user should be able to see the error msg "Please enter a valid username"(file:///C:/work/DSAlgo.RockStars/src/test/resources/Features/Register.feature:36)
+</textarea>
+      
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>dsalgo_Hooks.Hooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>The_user_Registers_with_invalid_Details
+          <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='../Screenshots/embedded3.png' src="../Screenshots/embedded3.png">
+  
+    
+
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="45"><span class="badge log fail-bg mr-2">Fail</span>The user Registers with invalid Details</div>
+                    <div class="status-avatar float-right">
+                      <i class="fa fa-paperclip"></i>
+                    </div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step pass-bg">
+                    <span>Given The user opens Register Page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When The user enters  "Raha_a@123" and "12345678" and "12345678"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step fail-bg">
+                    <span>Then The user should be able to see the error msg "Password cannot be only numeric"</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.AssertionError: Error Message is incorrect expected [Password cannot be only numeric] but found [password_mismatch:The two password fields didn’t match.]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+	at org.testng.Assert.assertEquals(Assert.java:132)
+	at org.testng.Assert.assertEquals(Assert.java:656)
+	at dsalgo_StepDefinition.Register_SD.the_user_should_be_able_to_see_the_error_msg(Register_SD.java:106)
+	at ✽.The user should be able to see the error msg "Password cannot be only numeric"(file:///C:/work/DSAlgo.RockStars/src/test/resources/Features/Register.feature:36)
+</textarea>
+      
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>dsalgo_Hooks.Hooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>The_user_Registers_with_invalid_Details
+          <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='../Screenshots/embedded4.png' src="../Screenshots/embedded4.png">
+  
+    
+
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="51"><span class="badge log pass-bg mr-2">Pass</span>The user Registers with invalid Details</div>
+                </div>
+              </div>
+              <div class="card-body mt-3 collapse">
+                  <div class="step pass-bg">
+                    <span>Given The user opens Register Page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When The user enters  "Raha_a@123" and "aha_1@456" and "aha_1@4567"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>Then The user should be able to see the error msg "password_mismatch:The two password fields didn’t match."</span>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="57"><span class="badge log fail-bg mr-2">Fail</span>The user Registers with valid Details</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
+      </div>
+    </div>
+        <div class="scenario_outline ">
+            <div class="card-body l1">
+              <div class="card-header">
+                <div class="card-title outline-child">
+                  <div class="node" id="58"><span class="badge log fail-bg mr-2">Fail</span>The user Registers with valid Details</div>
+                    <div class="status-avatar float-right">
+                      <i class="fa fa-paperclip"></i>
+                    </div>
+                </div>
+              </div>
+              <div class="card-body mt-3 ">
+                  <div class="step pass-bg">
+                    <span>Given The user opens Register Page</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>When The user enters a valid "Lillyy_1@999" and "testPassword@1" and "testPassword@1"</span>
+      <div>
+      </div>
+                  </div>
+                  <div class="step fail-bg">
+                    <span>Then The user should be navigated to Home Page with message "New Account Created. You are logged in as Lillyy_1@999"</span>
+      <div>
+        <textarea disabled class="code-block">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[contains(text(),'New Account Created.')]"}
+  (Session info: chrome=130.0.6723.93)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '22.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [78b7588902f16e38b34d036556c3d13e, findElement {value=//div[contains(text(),'New Account Created.')], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 130.0.6723.93, chrome: {chromedriverVersion: 130.0.6723.116 (6ac35f94ae3..., userDataDir: C:\Users\SUDHAB~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60764}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60764/devtoo..., se:cdpVersion: 130.0.6723.93, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 78b7588902f16e38b34d036556c3d13e
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy24.getText(Unknown Source)
+	at dsalgo_Pageobjects.HomePage_POM.accountCreationMsg(HomePage_POM.java:103)
+	at dsalgo_StepDefinition.Register_SD.the_user_should_be_navigated_to_home_page_with_message(Register_SD.java:123)
+	at ✽.The user should be navigated to Home Page with message "New Account Created. You are logged in as Lillyy_1@999"(file:///C:/work/DSAlgo.RockStars/src/test/resources/Features/Register.feature:50)
+</textarea>
+      
+      </div>
+                  </div>
+                  <div class="step pass-bg">
+                    <span>dsalgo_Hooks.Hooks.tearDown(io.cucumber.java.Scenario)</span>
+      <div>The_user_Registers_with_valid_Details
+          <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='../Screenshots/embedded5.png' src="../Screenshots/embedded5.png">
+  
+    
+
+    </div></div>
+</div>
+      <div>
+      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+<div class="test-wrapper row view exception-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Exception</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">2</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>4</span>
+</span>
+<p class="name">java.lang.AssertionError</p>
+<p class="duration text-sm">4 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>java.lang.AssertionError</h4>
+<span status="fail" class='badge log badge-danger'>4 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>20:32:45 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='31'>Then The user should be able to see the error msg "username already exists"</a>
+<div class="">
+<span class="badge badge-default">Testing functionality of Register Page.The user Registers with invalid Details.Then The user should be able to see the error msg "username already exists"</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>20:32:51 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='37'>Then The user should be able to see the error msg "Password should be atleast 8 characters"</a>
+<div class="">
+<span class="badge badge-default">Testing functionality of Register Page.The user Registers with invalid Details.Then The user should be able to see the error msg "Password should be atleast 8 characters"</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>20:32:56 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='43'>Then The user should be able to see the error msg "Please enter a valid username"</a>
+<div class="">
+<span class="badge badge-default">Testing functionality of Register Page.The user Registers with invalid Details.Then The user should be able to see the error msg "Please enter a valid username"</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>20:33:01 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='49'>Then The user should be able to see the error msg "Password cannot be only numeric"</a>
+<div class="">
+<span class="badge badge-default">Testing functionality of Register Page.The user Registers with invalid Details.Then The user should be able to see the error msg "Password cannot be only numeric"</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">org.openqa.selenium.NoSuchElementException</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>org.openqa.selenium.NoSuchElementException</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>20:33:13 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='62'>Then The user should be navigated to Home Page with message "New Account Created. You are logged in as Lillyy_1@999"</a>
+<div class="">
+<span class="badge badge-default">Testing functionality of Register Page.The user Registers with valid Details.Then The user should be navigated to Home Page with message "New Account Created. You are logged in as Lillyy_1@999"</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="test-wrapper row view category-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">8</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@TS_Register_02</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@TS_Register_02</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>20:32:28 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='8'>The user Registers account with empty fields</a>
+<div class="">
+<span class="badge badge-default">Testing functionality of Register Page.The user Registers account with empty fields</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@TS_Register_04</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@TS_Register_04</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>20:32:38 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='20'>The user Registers account with username, password and Confirm Password empty</a>
+<div class="">
+<span class="badge badge-default">Testing functionality of Register Page.The user Registers account with username, password and Confirm Password empty</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>5</span>
+<span class='badge log badge-danger'>5</span>
+</span>
+<p class="name">@Register</p>
+<p class="duration text-sm">10 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@Register</h4>
+<span status="pass" class='badge log pass-bg'>5 passed</span>
+<span status="fail" class='badge log badge-danger'>5 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>20:32:21 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='2'>The user launches home page of DSAlgo Project</a>
+<div class="">
+<span class="badge badge-default">Testing functionality of Register Page.The user launches home page of DSAlgo Project</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>20:32:28 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='8'>The user Registers account with empty fields</a>
+<div class="">
+<span class="badge badge-default">Testing functionality of Register Page.The user Registers account with empty fields</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>20:32:33 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='14'>The user Registers account with Username and other fields empty</a>
+<div class="">
+<span class="badge badge-default">Testing functionality of Register Page.The user Registers account with Username and other fields empty</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>20:32:38 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='20'>The user Registers account with username, password and Confirm Password empty</a>
+<div class="">
+<span class="badge badge-default">Testing functionality of Register Page.The user Registers account with username, password and Confirm Password empty</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>20:32:43 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='27'>The user Registers with invalid Details</a>
+<div class="">
+<span class="badge badge-default">Testing functionality of Register Page.The user Registers with invalid Details</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>20:32:49 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='33'>The user Registers with invalid Details</a>
+<div class="">
+<span class="badge badge-default">Testing functionality of Register Page.The user Registers with invalid Details</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>20:32:54 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='39'>The user Registers with invalid Details</a>
+<div class="">
+<span class="badge badge-default">Testing functionality of Register Page.The user Registers with invalid Details</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>20:33:00 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='45'>The user Registers with invalid Details</a>
+<div class="">
+<span class="badge badge-default">Testing functionality of Register Page.The user Registers with invalid Details</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>20:33:05 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='51'>The user Registers with invalid Details</a>
+<div class="">
+<span class="badge badge-default">Testing functionality of Register Page.The user Registers with invalid Details</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>20:33:10 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='58'>The user Registers with valid Details</a>
+<div class="">
+<span class="badge badge-default">Testing functionality of Register Page.The user Registers with valid Details</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@TS_Register_03</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@TS_Register_03</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>20:32:33 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='14'>The user Registers account with Username and other fields empty</a>
+<div class="">
+<span class="badge badge-default">Testing functionality of Register Page.The user Registers account with Username and other fields empty</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@TS_Register_01</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@TS_Register_01</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>20:32:21 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='2'>The user launches home page of DSAlgo Project</a>
+<div class="">
+<span class="badge badge-default">Testing functionality of Register Page.The user launches home page of DSAlgo Project</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>5</span>
+<span class='badge log badge-danger'>5</span>
+</span>
+<p class="name">@all</p>
+<p class="duration text-sm">10 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@all</h4>
+<span status="pass" class='badge log pass-bg'>5 passed</span>
+<span status="fail" class='badge log badge-danger'>5 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>20:32:21 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='2'>The user launches home page of DSAlgo Project</a>
+<div class="">
+<span class="badge badge-default">Testing functionality of Register Page.The user launches home page of DSAlgo Project</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>20:32:28 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='8'>The user Registers account with empty fields</a>
+<div class="">
+<span class="badge badge-default">Testing functionality of Register Page.The user Registers account with empty fields</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>20:32:33 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='14'>The user Registers account with Username and other fields empty</a>
+<div class="">
+<span class="badge badge-default">Testing functionality of Register Page.The user Registers account with Username and other fields empty</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>20:32:38 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='20'>The user Registers account with username, password and Confirm Password empty</a>
+<div class="">
+<span class="badge badge-default">Testing functionality of Register Page.The user Registers account with username, password and Confirm Password empty</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>20:32:43 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='27'>The user Registers with invalid Details</a>
+<div class="">
+<span class="badge badge-default">Testing functionality of Register Page.The user Registers with invalid Details</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>20:32:49 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='33'>The user Registers with invalid Details</a>
+<div class="">
+<span class="badge badge-default">Testing functionality of Register Page.The user Registers with invalid Details</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>20:32:54 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='39'>The user Registers with invalid Details</a>
+<div class="">
+<span class="badge badge-default">Testing functionality of Register Page.The user Registers with invalid Details</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>20:33:00 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='45'>The user Registers with invalid Details</a>
+<div class="">
+<span class="badge badge-default">Testing functionality of Register Page.The user Registers with invalid Details</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>20:33:05 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='51'>The user Registers with invalid Details</a>
+<div class="">
+<span class="badge badge-default">Testing functionality of Register Page.The user Registers with invalid Details</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>20:33:10 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='58'>The user Registers with valid Details</a>
+<div class="">
+<span class="badge badge-default">Testing functionality of Register Page.The user Registers with valid Details</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+<span class='badge log badge-danger'>4</span>
+</span>
+<p class="name">@TS_Register_05</p>
+<p class="duration text-sm">5 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@TS_Register_05</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+<span status="fail" class='badge log badge-danger'>4 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>20:32:43 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='27'>The user Registers with invalid Details</a>
+<div class="">
+<span class="badge badge-default">Testing functionality of Register Page.The user Registers with invalid Details</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>20:32:49 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='33'>The user Registers with invalid Details</a>
+<div class="">
+<span class="badge badge-default">Testing functionality of Register Page.The user Registers with invalid Details</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>20:32:54 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='39'>The user Registers with invalid Details</a>
+<div class="">
+<span class="badge badge-default">Testing functionality of Register Page.The user Registers with invalid Details</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>20:33:00 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='45'>The user Registers with invalid Details</a>
+<div class="">
+<span class="badge badge-default">Testing functionality of Register Page.The user Registers with invalid Details</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>20:33:05 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='51'>The user Registers with invalid Details</a>
+<div class="">
+<span class="badge badge-default">Testing functionality of Register Page.The user Registers with invalid Details</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@TS_Register_06</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@TS_Register_06</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>20:33:10 PM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='58'>The user Registers with valid Details</a>
+<div class="">
+<span class="badge badge-default">Testing functionality of Register Page.The user Registers with valid Details</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>Nov 6, 2024 08:32:20 PM</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>Nov 6, 2024 08:33:27 PM</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Features Passed</p>
+<h3>0</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Features Failed</p>
+<h3>1</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Features</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='0%'>
+<b>0</b> features passed
+</small>
+</div>
+<div>
+<small data-tooltip='100%'><b>1</b> features failed,
+<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Scenarios</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='child-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='50%'><b>5</b> scenarios passed</small></div>
+<div>
+<small data-tooltip='50%'><b>5</b> scenarios failed,
+<b>0</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Steps</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='grandchild-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='85%'><b>30</b> steps passed</small></div>
+<div>
+<small data-tooltip='14%'><b>5</b> steps failed,
+<b>0</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div>
+<canvas id="timeline" height="120"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"Testing functionality of Register Page":66.083
+};
+</script>
+<div class="row">
+<div class="col-lg-6 col-md-12 category-container">
+<div class="card">
+<div class="card-header"><p>Tags</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
+<tr>
+<td>@TS_Register_02</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@TS_Register_04</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@Register</td>
+<td>5</td>
+<td>5</td>
+<td>0</td>
+<td>0</td>
+<td>50%</td>
+</tr>
+<tr>
+<td>@TS_Register_03</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@TS_Register_01</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@all</td>
+<td>5</td>
+<td>5</td>
+<td>0</td>
+<td>0</td>
+<td>50%</td>
+</tr>
+<tr>
+<td>@TS_Register_05</td>
+<td>1</td>
+<td>4</td>
+<td>0</td>
+<td>0</td>
+<td>20%</td>
+</tr>
+<tr>
+<td>@TS_Register_06</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 0,
+failParent: 1,
+warningParent: 0,
+skipParent: 0,
+childCount: 5,
+passChild: 5,
+failChild: 5,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 30,
+failGrandChild: 5,
+warningGrandChild: 0,
+skipGrandChild: 0,
+infoGrandChild: 0,
+eventsCount: 5,
+};
+</script>        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@c05cd28cde1617b9d0c05a831daff6cb97fd9fd5/spark/js/spark-script.js"></script>
+<script type="text/javascript"></script></body>
+</html>
