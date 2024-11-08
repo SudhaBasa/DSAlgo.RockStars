@@ -7,7 +7,7 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 
-@CucumberOptions(features={"src/test/resources/Features/Homepage.feature"},
+@CucumberOptions(features={"src/test/resources/Features"},
 //tags = "@TS_Register_04",
 
 publish=true,
