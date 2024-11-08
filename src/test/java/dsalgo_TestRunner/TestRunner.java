@@ -7,8 +7,9 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 
-@CucumberOptions(features={"src/test/resources/Features/Register.feature"},
-tags = "@TS_Register_04",
+
+@CucumberOptions(features={"src/test/resources/Features"},
+//tags = "@TS_Register_04",
 
 publish=true,
 glue= {"dsalgo_StepDefinition","dsalgo_Hooks"},
