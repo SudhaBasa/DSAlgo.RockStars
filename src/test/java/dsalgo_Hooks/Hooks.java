@@ -25,8 +25,10 @@ public class Hooks {
 	public static WebDriver driver;
 
 	@Before
-	public void setup() {
-		DriverFactory.initializeBrowser(ConfigReader.getProperty("browser"));
+	public void setup() throws Throwable {
+//		DriverFactory.initializeBrowser(ConfigReader.getProperty("browser"));
+		String browser = ConfigReader.getBrowserType();
+		DriverFactory.initializeBrowser(browser);
 		driver = DriverFactory.getDriver();
 
 		driver.manage().deleteAllCookies();
