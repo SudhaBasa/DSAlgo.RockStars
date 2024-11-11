@@ -6,15 +6,16 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 
 import dsalgo_Hooks.Hooks;
-
+import io.cucumber.junit.Cucumber;
+import dsalgo_Utilities.ConfigReader;
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
-//@RunWith(Cucumber.class)
+@RunWith(Cucumber.class)
 @CucumberOptions(features={"src/test/resources/Features",
 		//features= {"@target/rerun.txt"
 		},
-//tags = "@TS_Queue_03",
+tags = "@Homepage_01",
 publish=true,
 glue= {"dsalgo_StepDefinition","dsalgo_Hooks"},
 plugin={"pretty","html:target/CucumberReports/CucumberReport.html","com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
@@ -27,15 +28,14 @@ plugin={"pretty","html:target/CucumberReports/CucumberReport.html","com.aventsta
 
 public class TestRunnerTestng extends AbstractTestNGCucumberTests{
 	@Override
-    @DataProvider(parallel = true)
+    @DataProvider(parallel = false)
     public Object[][] scenarios() {
 				
 		return super.scenarios();
     }
-//	@Parameters("browser")
-//	@BeforeTest
-//	public void beforeTest(String browser) {
-//		Hooks.setBrowser(browser);
-//	}
-
-}
+	
+	@BeforeTest
+	@Parameters("browser")
+	public void defineBrowser(String browser) throws Throwable {
+		ConfigReader.setBrowserType(browser);
+	}}
