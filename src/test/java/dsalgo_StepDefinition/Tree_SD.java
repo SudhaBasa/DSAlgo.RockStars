@@ -2,6 +2,9 @@ package dsalgo_StepDefinition;
 
 import static org.testng.Assert.assertEquals;
 
+import org.openqa.selenium.WebDriver;
+
+import dsalgo_DriverFactory.DriverFactory;
 import dsalgo_Pageobjects.HomePage_POM;
 import dsalgo_Pageobjects.Tree_POM;
 import io.cucumber.java.en.Given;
@@ -12,6 +15,7 @@ public class Tree_SD {
 
 	HomePage_POM homePage = new HomePage_POM();
 	Tree_POM treePage = new Tree_POM();
+	WebDriver driver=DriverFactory.getDriver();
 
 	@Given("The User is on Home Page after logged in")
 	public void the_user_is_on_home_page_after_logged_in() {
@@ -188,7 +192,9 @@ public class Tree_SD {
 
 	@Given("The user is on the Binary Tree Traversals page")
 	public void the_user_is_on_the_binary_tree_traversals_page() {
-		treePage.navigateToBinaryTreeTravesLink();
+		//treePage.navigateToBinaryTreeTravesLink();
+		driver.get("https://dsportalapp.herokuapp.com/tree/binary-trees/");
+	
 	}
 
 	@When("The user clicks Implementation of Binary Trees link")
