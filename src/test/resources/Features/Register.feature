@@ -53,12 +53,12 @@ Feature: Testing functionality of Register Page
       | username      | password       | passwordconfirmation |
       | Lillyy_1@999 | testPassword@1 | testPassword@1       |
 
-  #@TS_Register_7
-  #Scenario Outline: User on signin page and login with valid credentials
-    #Given The user is on Sign In Page of DS Algo Portal
-    #When The user enter valid "Lillyy_1@991" and "testPassword@1"
-    #Then The user is navigated to homepage
-#
-    #Examples: 
-      #| username     | password       |
-      #| Lillyy_1@991 | testPassword@1 |
+  @TS_Register_7
+  Scenario Outline: User on signin page and login with valid credentials
+    Given The user is on Sign In Page of DS Algo Portal
+    When The user enter valid "Lillyy_1@991" and "testPassword@1"
+    Then The user is navigated to homepage
+
+    Examples: 
+      | username     | password       |
+      | Lillyy_1@991 | testPassword@1 |

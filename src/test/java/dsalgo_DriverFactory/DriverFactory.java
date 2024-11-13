@@ -9,23 +9,23 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class DriverFactory {
 	
-	public static WebDriver driver;
+	//public static WebDriver driver;
 	
 	public static ThreadLocal<WebDriver>tldriver = new ThreadLocal<>();
 	
-	public static WebDriver initializeBrowser(String browser) {
+	public WebDriver initializeBrowser(String browser) {
 		System.out.println("browser value is: " +browser);
 		
 		if(browser.equals("chrome")) {
-			WebDriverManager.chromedriver().setup();
+			//WebDriverManager.chromedriver().setup();
 			tldriver.set(new ChromeDriver());
 		}
 		else if (browser.equals("firefox")) {
-			WebDriverManager.firefoxdriver().setup();
+			//WebDriverManager.firefoxdriver().setup();
 			tldriver.set(new FirefoxDriver());
 	}
 		else if (browser.equals("edge")) {
-			WebDriverManager.edgedriver().setup();
+			//WebDriverManager.edgedriver().setup();
 			tldriver.set(new EdgeDriver());
 	}
 		else {
@@ -42,9 +42,9 @@ public class DriverFactory {
 	}
 	public static void quitDriver() {
 		System.out.println("Quitting WebDriver");
-		if (driver != null) {
-			driver.quit();
-			driver = null;
+		if (tldriver.get() != null) {
+			tldriver.get().quit();
+			tldriver.remove();
 		}
 	}
 	
