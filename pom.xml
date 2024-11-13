@@ -13,12 +13,21 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>3.5.0</version>
 				<configuration>
-					<suiteXmlFiles>
+					<!--suiteXmlFiles>
 						<suiteXmlFile>testng.xml</suiteXmlFile>
-					</suiteXmlFiles>
+					</suiteXmlFiles-->
+					
+					
 					<suiteXmlFiles>
 		            	<suiteXmlFile>testngcross.xml</suiteXmlFile>
 		          	</suiteXmlFiles>
+		          	
+		          	<properties>
+            <dataproviderthreadcount>3</dataproviderthreadcount>
+            <parallel>all</parallel>
+            <threadcount>3</threadcount>
+            </properties>
+		          	
 				</configuration>
 			</plugin>
 			<plugin>
