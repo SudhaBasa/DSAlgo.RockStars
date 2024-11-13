@@ -23,12 +23,14 @@ import io.cucumber.java.Scenario;
 
 public class Hooks {
 	public static WebDriver driver;
+	DriverFactory df=new DriverFactory();
 
 	@Before
 	public void setup() throws Throwable {
 //		DriverFactory.initializeBrowser(ConfigReader.getProperty("browser"));
 		String browser = ConfigReader.getBrowserType();
-		DriverFactory.initializeBrowser(browser);
+		df.initializeBrowser(browser);
+		
 		driver = DriverFactory.getDriver();
 
 		driver.manage().deleteAllCookies();

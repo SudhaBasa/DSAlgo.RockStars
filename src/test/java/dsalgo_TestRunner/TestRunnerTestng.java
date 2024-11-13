@@ -11,11 +11,11 @@ import dsalgo_Utilities.ConfigReader;
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
-@RunWith(Cucumber.class)
-@CucumberOptions(features={"src/test/resources/Features",
+//@RunWith(Cucumber.class)
+@CucumberOptions(features={"src/test/resources/Features/Queue.feature",
 		//features= {"@target/rerun.txt"
 		},
-tags = "@Homepage_01",
+//tags = "  @TS_Queue_03",
 publish=true,
 glue= {"dsalgo_StepDefinition","dsalgo_Hooks"},
 plugin={"pretty","html:target/CucumberReports/CucumberReport.html","com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
@@ -28,7 +28,7 @@ plugin={"pretty","html:target/CucumberReports/CucumberReport.html","com.aventsta
 
 public class TestRunnerTestng extends AbstractTestNGCucumberTests{
 	@Override
-    @DataProvider(parallel = false)
+    @DataProvider(parallel = true)
     public Object[][] scenarios() {
 				
 		return super.scenarios();
