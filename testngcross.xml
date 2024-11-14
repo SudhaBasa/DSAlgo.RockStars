@@ -12,11 +12,11 @@
 		<classes>
 			<class name="dsalgo_TestRunner.TestRunnerTestng"></class>
 		</classes>
-	</test> <!-- Test -->
+	</test> 
 	<test thread-count="3" name="Testedge">
 		<parameter name="browser" value="edge" />
 		<classes>
 			<class name="dsalgo_TestRunner.TestRunnerTestng"></class>
 		</classes>
-   </test> <!-- Test -->
+   </test> 
 </suite> <!-- Suite -->
