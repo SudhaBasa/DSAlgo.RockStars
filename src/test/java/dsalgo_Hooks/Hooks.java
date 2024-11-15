@@ -37,7 +37,7 @@ public class Hooks {
 	}
 
 	@After
-	public void tearDown(Scenario scenario) throws InterruptedException {
+	public void tearDown(Scenario scenario) throws Throwable {
 
 		String scenarioName = scenario.getName().replaceAll(" ", "_");
 
