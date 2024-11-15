@@ -51,7 +51,7 @@ Feature: Testing functionality of Register Page
 
     Examples: 
       | username      | password       | passwordconfirmation |
-      | Lillyy_1@999 | testPassword@1 | testPassword@1       |
+      | Lillyy_1@9992 | testPassword@1 | testPassword@1       |
 
   @TS_Register_7
   Scenario Outline: User on signin page and login with valid credentials
