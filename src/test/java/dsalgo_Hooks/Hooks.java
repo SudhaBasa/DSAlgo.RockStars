@@ -15,53 +15,50 @@ import dsalgo_DriverFactory.DriverFactory;
 import dsalgo_Utilities.Loggerload;
 import dsalgo_Utilities.ConfigReader;
 import io.cucumber.java.After;
-import io.cucumber.java.AfterStep;
 import io.cucumber.java.Before;
-import io.cucumber.java.BeforeAll;
 import io.cucumber.java.Scenario;
-
 
 public class Hooks {
 	public static WebDriver driver;
-	DriverFactory df=new DriverFactory();
+	// DriverFactory df=new DriverFactory();
 
 	@Before
 	public void setup() throws Throwable {
-//		DriverFactory.initializeBrowser(ConfigReader.getProperty("browser"));
+		//DriverFactory.initializeBrowser(ConfigReader.getProperty("browser"));
 		String browser = ConfigReader.getBrowserType();
-		df.initializeBrowser(browser);
-		
+		DriverFactory.initializeBrowser(browser);
+
 		driver = DriverFactory.getDriver();
 
 		driver.manage().deleteAllCookies();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		
+
 	}
-	
 
 	@After
 	public void tearDown(Scenario scenario) throws InterruptedException {
 
-		String scenarioName=scenario.getName().replaceAll(" ", "_");
-		
+		String scenarioName = scenario.getName().replaceAll(" ", "_");
+
 		if (scenario.isFailed()) {
 			Loggerload.error("Scenario is Failed and taking Screenshot");
-			
-			byte[] screenShot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.BYTES);
+
+			byte[] screenShot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
 			scenario.attach(screenShot, "image/png", scenarioName);
-			
-	        File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-	        try {
-	            FileUtils.copyFile(screenshot, new File("target/screenshots/" + scenario.getName() + ".png"));
-	        } catch (IOException e) {
-	            e.printStackTrace();
-	        }
-	    }
-		
-		
+
+			File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+			try {
+				FileUtils.copyFile(screenshot, new File("target/screenshots/" + scenario.getName() + ".png"));
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+
 		Thread.sleep(3000);
-		driver.quit();
+		
+		DriverFactory.quitDriver();
+		//driver.quit();
 
 	}
 

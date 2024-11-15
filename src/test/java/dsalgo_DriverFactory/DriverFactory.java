@@ -5,15 +5,17 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+
+import dsalgo_Utilities.ConfigReader;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class DriverFactory {
 	
-	//public static WebDriver driver;
+	public static WebDriver driver;
 	
 	public static ThreadLocal<WebDriver>tldriver = new ThreadLocal<>();
 	
-	public WebDriver initializeBrowser(String browser) {
+	public static WebDriver initializeBrowser(String browser) {
 		System.out.println("browser value is: " +browser);
 		
 		if(browser.equals("chrome")) {
@@ -41,7 +43,7 @@ public class DriverFactory {
 		return tldriver.get();
 	}
 	public static void quitDriver() {
-		System.out.println("Quitting WebDriver");
+		System.out.println("Quitting Browser: " + ConfigReader.getBrowserType());
 		if (tldriver.get() != null) {
 			tldriver.get().quit();
 			tldriver.remove();
