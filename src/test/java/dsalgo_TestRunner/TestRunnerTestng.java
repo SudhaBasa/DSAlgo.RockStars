@@ -13,11 +13,11 @@ import io.cucumber.testng.CucumberOptions;
 
 //@RunWith(Cucumber.class)
 
-@CucumberOptions(features={"src/test/resources/Features",
+@CucumberOptions(features={"src/test/resources/Features/Register.feature",
 
 		//features= {"@target/rerun.txt"
 		},
-//tags = "@TS_Queue_03",
+tags = "@TS_Register_06",
 publish=true,
 glue= {"dsalgo_StepDefinition","dsalgo_Hooks"},
 plugin={"pretty","html:target/CucumberReports/CucumberReport.html","com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",

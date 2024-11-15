@@ -35,6 +35,10 @@ public class Register_POM {
 		PageFactory.initElements(driver, this);
 	}
 
+	public String getUserText() {
+		return userName.getAttribute("value");
+	}
+
 	public String getErrorMsg() {
 		String msg = errorMsg.getText();
 		return msg;

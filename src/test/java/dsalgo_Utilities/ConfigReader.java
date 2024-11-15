@@ -6,6 +6,8 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 
+import org.apache.commons.lang.RandomStringUtils;
+
 public class ConfigReader {
 
 	private static Properties prop = null;
@@ -61,5 +63,14 @@ public class ConfigReader {
 		else
 			throw new RuntimeException("Excel file path not specified in the config.properties file");
 	}
+	
+	public static String randomAlphaNumeric() {
+		String str = RandomStringUtils.randomAlphabetic(5);
+		String num = RandomStringUtils.randomNumeric(3);
+
+		return (str + "@" + num);
+
+	}
+
 
 }
