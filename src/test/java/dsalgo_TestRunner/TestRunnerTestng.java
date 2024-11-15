@@ -12,7 +12,9 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
 //@RunWith(Cucumber.class)
-@CucumberOptions(features={"src/test/resources/Features/Graph.feature",
+
+@CucumberOptions(features={"src/test/resources/Features/Homepage.feature",
+
 		//features= {"@target/rerun.txt"
 		},
 //tags = "@TS_Queue_03",

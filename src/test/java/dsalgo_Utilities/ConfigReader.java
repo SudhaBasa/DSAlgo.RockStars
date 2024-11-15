@@ -15,7 +15,7 @@ public class ConfigReader {
 		browserType = browser;
 	}
 	
-	public static String getBrowserType() {
+	public static String getBrowserType() throws Throwable {
 		if (browserType != null)
 			return browserType;
 		else
