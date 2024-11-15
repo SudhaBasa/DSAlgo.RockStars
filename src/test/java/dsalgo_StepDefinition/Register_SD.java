@@ -31,7 +31,7 @@ import io.cucumber.java.en.When;
 public class Register_SD {
 	Register_POM register = new Register_POM();
 	HomePage_POM homepage = new HomePage_POM();
-	
+	String userValue;
 	
 	// WebDriver driver = DriverFactory.getDriver();
 //	String registerUsername;
@@ -110,19 +110,29 @@ public class Register_SD {
 	@When("The user enters a valid {string} and {string} and {string}")
 	public void the_user_enters_a_valid_and_and(String username, String password, String passwordconfirmation) {
 		Loggerload.info("The user is entering valid Username and Password");
-		register.enterUserName(username);
+		register.enterUserName(ConfigReader.randomAlphaNumeric());
+		userValue=register.getUserText();
+		//register.enterUserName(username);
 		register.enterPwd(password);
 		register.enterPwdConfirm(passwordconfirmation);
 		register.clickOnRegisterButton();
 	}
 
-	@Then("The user should be navigated to Home Page with message {string}")
-	public void the_user_should_be_navigated_to_home_page_with_message(String username) {
-		// String actualMsg = username;
-		Loggerload.info("The new account is created ");
-		assertEquals(username, homepage.accountCreationMsg(), "Message did not match");
+	@Then("The user should be navigated to Home Page with message {string} {string}")
+	public void the_user_should_be_navigated_to_home_page_with_message(String string, String strin) {
+		String user=string+userValue;
+		System.out.println(user);
+		assertEquals(user, homepage.accountCreationMsg(), "Message did not match");
 
 	}
+
+//	@Then("The user should be navigated to Home Page with message {string}")
+//	public void the_user_should_be_navigated_to_home_page_with_message(String username) {
+//		// String actualMsg = username;
+//		Loggerload.info("The new account is created ");
+//		assertEquals(username, homepage.accountCreationMsg(), "Message did not match");
+//
+//	}
 
 	// @TS_Register_07
 //	@Given("The user is on signin page")

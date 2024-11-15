@@ -47,11 +47,11 @@ Feature: Testing functionality of Register Page
   Scenario Outline: The user Registers with valid Details
     Given The user opens Register Page
     When The user enters a valid "<username>" and "<password>" and "<passwordconfirmation>"
-    Then The user should be navigated to Home Page with message "New Account Created. You are logged in as <username>"
+    Then The user should be navigated to Home Page with message "New Account Created. You are logged in as " "<userValue>"
 
     Examples: 
-      | username      | password       | passwordconfirmation |
-      | Lillyy_1@999 | testPassword@1 | testPassword@1       |
+      |  password       | passwordconfirmation |
+      |  testPassword@1 | testPassword@1       |
 
   @TS_Register_7
   Scenario Outline: User on signin page and login with valid credentials
