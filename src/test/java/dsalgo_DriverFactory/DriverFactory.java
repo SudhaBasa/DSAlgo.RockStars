@@ -42,7 +42,7 @@ public class DriverFactory {
 	public static synchronized WebDriver getDriver() {
 		return tldriver.get();
 	}
-	public static void quitDriver() {
+	public static void quitDriver() throws Throwable {
 		System.out.println("Quitting Browser: " + ConfigReader.getBrowserType());
 		if (tldriver.get() != null) {
 			tldriver.get().quit();
