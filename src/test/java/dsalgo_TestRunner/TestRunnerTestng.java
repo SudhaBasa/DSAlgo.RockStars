@@ -17,7 +17,7 @@ import io.cucumber.testng.CucumberOptions;
 
 		//features= {"@target/rerun.txt"
 		},
-tags = "@TS_Register_06",
+//tags = "@TS_Register_06",
 publish=true,
 glue= {"dsalgo_StepDefinition","dsalgo_Hooks"},
 plugin={"pretty","html:target/CucumberReports/CucumberReport.html","com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
