@@ -13,7 +13,7 @@ import io.cucumber.testng.CucumberOptions;
 
 //@RunWith(Cucumber.class)
 
-@CucumberOptions(features={"src/test/resources/Features/Register.feature",
+@CucumberOptions(features={"src/test/resources/Features",
 
 		//features= {"@target/rerun.txt"
 		},
